@@ -164,7 +164,7 @@ namespace FindAndReplace
                 if((single && kvPairsOne.Count == 0) || (!single && (kvPairsOne.Count == 0 || kvPairsTwo.Count == 0)))
                 {
                     MessageBox.Show("Key / Value pairs are blank, please provide a file.", "Provide Key / Value File", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    tabPageKeyValues.Show();
+                    tabControlMain.SelectedTab = tabPageKeyValues;
                 }
                 else
                 {
@@ -216,7 +216,7 @@ namespace FindAndReplace
             else
             {
                 MessageBox.Show("Source Text is blank, please provide a file.", "Provide Source File", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                tabPageSource.Show();
+                tabControlMain.SelectedTab = tabPageSource;
             }
             this.textBoxLogs.Text = this.logText;
         }
